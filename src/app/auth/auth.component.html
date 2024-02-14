@@ -1,1 +1,131 @@
-<p>auth works!</p>
+<div
+  class="container-login100"
+  style="background-image: url('././assets/img/bg-01.jpg')"
+>
+  <div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
+    <form
+      class="login100-form validate-form w-100"
+      novalidate
+      [formGroup]="loginForm"
+      (ngSubmit)="onSubmit(loginForm)"
+    >
+      <!-- <div *ngIf="loading" style="text-align: center">
+        <app-loading-spinner></app-loading-spinner>
+      </div> -->
+      <div *ngIf="errors" class="alert alert-danger m-2">
+        {{ errors.length > 10 ? errors.slice(0, 20) + "..." : errors }}
+      </div>
+
+      <div class="text-center">
+        <img
+          src="././assets/img/SKUH-Logo1.png"
+          style="width: 270px"
+          alt="logo"
+        />
+      </div>
+      <span class="login100-form-title p-b-37"> Meals System </span>
+      <p>Please login to your account</p>
+
+      <div
+        class="wrap-input100 validate-input m-b-20 alert-validate"
+        data-validate="Enter username or email"
+      >
+        <input
+          class="form-control input100"
+          type="text"
+          name="username"
+          placeholder="username or email"
+          formControlName="UserName"
+          [ngClass]="{
+            'is-valid':
+              loginForm.controls['UserName'].valid ||
+              loginForm.controls['UserName'].dirty ||
+              loginForm.controls['UserName'].touched,
+            'is-invalid':
+              loginForm.controls['UserName'].invalid &&
+              (loginForm.controls['UserName'].dirty ||
+                loginForm.controls['UserName'].touched)
+          }"
+        />
+
+        <span class="focus-input100"></span>
+
+        <!-- <span class="btn-hide-validate"></span> -->
+      </div>
+
+      <div
+        class="form-control-feedback text-danger text-end h6 p-0 m-0"
+        *ngIf="
+          loginForm.controls['UserName'].invalid &&
+          (loginForm.controls['UserName'].dirty ||
+            loginForm.controls['UserName'].touched)
+        "
+      >
+        <span *ngIf="loginForm.controls['UserName'].errors?.['required']"
+          >Username is required</span
+        >
+        <span
+          *ngIf="
+          loginForm.controls['UserName'].errors?.['firstLetterUppercase']
+
+        "
+          >First letter is Capital</span
+        >
+        <span
+          *ngIf="
+          loginForm.controls['UserName'].errors?.['usernameExists']
+
+        "
+          >User name Not exists</span
+        >
+      </div>
+
+      <div
+        class="wrap-input100 validate-input m-b-25 alert-validate"
+        data-validate="Enter password"
+      >
+        <input
+          class="input100 form-control"
+          type="password"
+          name="pass"
+          placeholder="password"
+          formControlName="Password"
+          [ngClass]="{
+            'is-valid':
+              loginForm.controls['Password'].valid ||
+              loginForm.controls['Password'].dirty ||
+              loginForm.controls['Password'].touched,
+            'is-invalid':
+              loginForm.controls['Password'].invalid &&
+              (loginForm.controls['Password'].dirty ||
+                loginForm.controls['Password'].touched)
+          }"
+        />
+        <span class="focus-input100"></span>
+        <!-- <span class="btn-hide-validate"></span> -->
+      </div>
+      <div
+        class="form-control-feedback text-danger text-end h6 p-0 m-0"
+        *ngIf="
+          loginForm.controls['Password'].invalid &&
+          (loginForm.controls['Password'].dirty ||
+            loginForm.controls['Password'].touched)
+        "
+      >
+        <span *ngIf="loginForm.controls['Password'].errors?.['required']">
+          Password is required</span
+        >
+      </div>
+      <div class="container-login100-form-btn">
+        <button
+          class="login100-form-btn mt-3"
+          [ngClass]="loading ? 'spinner' : ''"
+          type="submit"
+          [disabled]="loginForm.status === 'INVALID'"
+        >
+          Sign In
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
