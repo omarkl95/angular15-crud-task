@@ -1,0 +1,2 @@
+npm i json-server
+npm i ngx-toastr@15
