@@ -2,3 +2,21 @@
 
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
+.cursor {
+  cursor: pointer;
+}
+
+.form-control:focus {
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.form-control {
+  height: 40px;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
