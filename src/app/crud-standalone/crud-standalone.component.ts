@@ -9,12 +9,10 @@ import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-crud-standalone',
   standalone: true,
-  imports: [CommonModule , AddComponent , UpdateComponent, RouterModule,
-  ],
+  imports: [CommonModule, AddComponent, UpdateComponent, RouterModule],
   providers: [DataService],
-
   templateUrl: './crud-standalone.component.html',
-  styleUrls: ['./crud-standalone.component.scss']
+  styleUrls: ['./crud-standalone.component.scss'],
 })
 export class CrudStandaloneComponent {
   public books$: any;

@@ -1,2 +1,4 @@
 npm i json-server
+package.json
+   npm run start-server
 npm i ngx-toastr@15
