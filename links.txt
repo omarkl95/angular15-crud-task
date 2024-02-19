@@ -1,3 +1,5 @@
+npm install bootstrap@5.2.3
+
 npm i json-server
 package.json
    npm run start-server
