@@ -8,3 +8,4 @@ npm i ngx-toastr@15
 
 
 https://www.youtube.com/watch?v=8hNxZZ5LA0k
+https://www.google.com.eg/search?q=angular+15+bootstrap+crud+with+pagination&tbm=isch&ved=2ahUKEwib7rOX_baEAxWqV6QEHYO2B2kQ2-cCegQIABAA&oq=angular+15+bootstrap+crud+with+pagination&gs_lp=EgNpbWciKWFuZ3VsYXIgMTUgYm9vdHN0cmFwIGNydWQgd2l0aCBwYWdpbmF0aW9uSMkzUKEFWMcxcAB4AJABAJgBZ6AB4wyqAQQxNi4xuAEDyAEA-AEBigILZ3dzLXdpei1pbWeIBgE&sclient=img&ei=QxDTZdvAKqqvkdUPg-2eyAY&bih=932&biw=1912#imgrc=sVFrWJBlp1jsNM
