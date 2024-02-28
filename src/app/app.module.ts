@@ -10,8 +10,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NavbarComponent } from './shared/component/navbar/navbar.component';
 @NgModule({
-  declarations: [AppComponent, AuthComponent, CrudListComponent],
+  declarations: [AppComponent, AuthComponent, CrudListComponent, NavbarComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

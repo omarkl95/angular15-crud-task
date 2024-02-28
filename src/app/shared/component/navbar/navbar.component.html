@@ -1,0 +1,63 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <a class="navbar-brand navbarBrand" href="#">Noxe</a>
+  <button
+    class="navbar-toggler d-lg-none"
+    type="button"
+    data-toggle="collapse"
+    data-target="#collapsibleNavId"
+    aria-controls="collapsibleNavId"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  ></button>
+  <div class="collapse navbar-collapse" id="collapsibleNavId">
+    <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+      <li *ngIf="isLogin" class="nav-item">
+        <a class="nav-link" routerLink="home">Home</a>
+      </li>
+
+      <li *ngIf="isLogin" class="nav-item">
+        <a class="nav-link" routerLink="movie">Movies</a>
+      </li>
+      <li *ngIf="isLogin" class="nav-item">
+        <a class="nav-link" routerLink="tv">TVShow</a>
+      </li>
+      <li *ngIf="isLogin" class="nav-item">
+        <a class="nav-link" routerLink="peaple">Peaple</a>
+      </li>
+      <li *ngIf="isLogin" class="nav-item">
+        <a class="nav-link" routerLink="about">About</a>
+      </li>
+      <li *ngIf="isLogin" class="nav-item">
+        <a class="nav-link" routerLink="network">Networks</a>
+      </li>
+      <li *ngIf="isLogin" class="nav-item">
+        <a class="nav-link" routerLink="hr">Hr</a>
+      </li>
+    </ul>
+    <div class="form-inline my-2 my-lg-0">
+      <i class="fab fa-facebook text-white px-2"></i>
+      <i class="fab fa-twitter text-white px-2"></i>
+      <i class="fab fa-instagram text-white px-2"></i>
+
+      <a
+        *ngIf="!isLogin"
+        class="text-white text-decoration-none px-2"
+        routerLink="/auth/register"
+        >Register</a
+      >
+      <a
+        *ngIf="!isLogin"
+        class="text-white text-decoration-none px-2"
+        routerLink="/auth/login"
+        >Login</a
+      >
+      <a
+        (click)="logout()"
+        *ngIf="isLogin"
+        class="text-white text-decoration-none px-2"
+        routerLink=""
+        >Logout</a
+      >
+    </div>
+  </div>
+</nav>
