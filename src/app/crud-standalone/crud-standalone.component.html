@@ -37,7 +37,13 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let book of books$; let i = index">
+              <tr
+                *ngFor="
+                  let book of books$
+                    | slice : (page - 1) * pageSize : page * pageSize;
+                  let i = index
+                "
+              >
                 <th scope="row">{{ book.id }}</th>
                 <td>{{ book.author }}</td>
                 <td>{{ book.country }}</td>
@@ -66,6 +72,13 @@
             </tbody>
           </table>
         </div>
+        <ngb-pagination
+          [collectionSize]="books$.length"
+          [(page)]="page"
+          [pageSize]="pageSize"
+          aria-label="Default pagination"
+        >
+        </ngb-pagination>
       </div>
     </div>
   </div>
